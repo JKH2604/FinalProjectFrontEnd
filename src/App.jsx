@@ -1,22 +1,21 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
-import HomeLayout from './layout/User/HomeLayout';
-import AdminLayout from './layout/Admin/AdminLayout';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './pages/Login.jsx';
+import Register from './pages/Register.jsx';
+import './css/main.css';
 
 function App() {
-  const [message, setMessage] = useState('');
-
-  // useEffect(() => {
-  //   axios.get('http://localhost:5000/api')
-  //     .then(res => setMessage(res.data.message))
-  //     .catch(err => console.error('Error: ', err));
-  // }, []);
-
-  return (
-    <>
-      <AdminLayout />
-    </>
-  )
+    return (
+        <Router>
+            <div className="min-h-screen w-full bg-gray-100">
+                <Routes>
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
+                    <Route path="/" element={<Login />} /> {/* Trang mặc định */}
+                </Routes>
+            </div>
+        </Router>
+    );
 }
 
-export default App
+export default App;
