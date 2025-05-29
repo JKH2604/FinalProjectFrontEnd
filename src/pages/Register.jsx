@@ -79,4 +79,4 @@ const Register = () => {
     );
 };
 
-export default Register;git add .
+export default Register;
