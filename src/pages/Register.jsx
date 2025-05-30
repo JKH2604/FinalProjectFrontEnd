@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import wallpaperLogin from '../assets/wallpaperLogin.jpg';
+import logo from '../assets/quiztech_logo.svg';
 
 const Register = () => {
     return (
-        <div className="min-h-screen w-full flex bg-gray-100">
+        <div className="min-h-screen w-full flex bg-gray-900">
             <div className="flex w-full h-screen">
                 <div className="hidden lg:block w-1/2 relative">
                     <img
@@ -12,6 +13,13 @@ const Register = () => {
                         alt="Background Effect"
                         className="absolute inset-0 w-full h-full object-cover opacity-50 z-0"
                     />
+                    <div className="absolute inset-0 flex flex-col items-center justify-center z-20">
+                        <img src={logo} alt="Logo" className="h-24 mb-4" />
+                        <p className="text-2xl font-semibold text-white text-center">
+                            Chào mừng đến với <span className="text-yellow-300">QuizTech</span><br />
+                            Nền tảng ôn thi trắc nghiệm thông minh!
+                        </p>
+                    </div>
                     <img
                         src={wallpaperLogin}
                         alt="Register Illustration"
