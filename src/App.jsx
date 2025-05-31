@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login.jsx';
 import Register from './pages/Register.jsx';
 import './css/main.css';
+import HomeLayout from './layout/User/HomeLayout.jsx';
+import AdminLayout from './layout/Admin/AdminLayout.jsx';
 
 function App() {
     return (
@@ -11,7 +13,7 @@ function App() {
                 <Routes>
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
-                    <Route path="/" element={<Login />} /> {/* Trang mặc định */}
+                    <Route path="/" element={<AdminLayout />} />
                 </Routes>
             </div>
         </Router>
